@@ -27,7 +27,7 @@ const Confirmation = ({imagePath, heading, subheading, buttonText, className}: C
                 <p className="text-[#71717A] text-[16px] text-center mt-1">{subheading}</p>
             </div>
             <button onClick={() => router.push("/checkout")}
-              className="relative right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-200 font-semibold text-[14px]  p-[15px] mt-2">
+              className=" right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-200 font-semibold text-[14px]  p-[15px] mt-2">
                 {buttonText}
             </button>
         </div>
