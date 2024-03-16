@@ -30,19 +30,7 @@ const Options = ({
                     className={cn(
                         "w-full py-[14px] px-[24px] hover:cursor-pointer font-semibold text-[12px]"
                     )}
-                    style={{
-                        // color:
-                        //     payment === value
-                        //         ? data?.theme["--primary"]
-                        //         : undefined,
-                        // backgroundColor:
-                        //     payment === value ? theme === 'light' ? "white" : "#121212" : undefined,
-                        // borderLeft: payment === value ? "solid" : undefined,
-                        // borderColor:
-                        //     payment === value
-                        //         ? data?.theme["--primary"]
-                        //         : undefined,
-                        color:
+                    style={{ color:
                             payment === value
                                 ? data?.theme["--primary"]
                                 : undefined,

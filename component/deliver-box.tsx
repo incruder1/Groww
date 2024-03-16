@@ -1,7 +1,6 @@
 "use client";
 
 import { useLogoInfo } from "@/hooks/items-hooks";
-import { Button } from "./smallComponent/button";
 import Loading from "./smallComponent/loading";
 import { useTheme } from "next-themes";
 
@@ -24,14 +23,7 @@ const AddressBox = ({ page }: AddressBoxProps) => {
         <div className="h-[124px] p-[24px] flex flex-row justify-between border border-[#F4F4F5] dark:border-[#494949] rounded-[8px]">
             <div className="flex flex-col justify-between">
                 <div>
-                    <h1
-                        style={{
-                            color:
-                                theme === "light"
-                                    ? brandInfo?.theme["--background"]
-                                    : brandInfo?.theme["--foreground"],
-                        }}
-                        className="uppercase text-[12px] text-[#3F3F46] font-semibold"
+                    <h1 className="uppercase text-[12px] text-[#3F3F46] font-semibold"
                     >
                         deliver to
                     </h1>
@@ -44,13 +36,11 @@ const AddressBox = ({ page }: AddressBoxProps) => {
                 </div>
             </div>
             {page === "checkout" && (
-                <Button
-                    style={{ color: brandInfo.theme["--primary"] }}
-                    className="uppercase font-semibold text-[12px] border-none h-full"
-                    variant={"link"}
+                <button
+                    className="relative right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-400 font-semibold text-[14px]  p-[15px] mt-2"
                 >
                     Change
-                </Button>
+                </button>
             )}
         </div>
     );

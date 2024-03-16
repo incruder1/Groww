@@ -5,7 +5,6 @@ import { getRandomValue } from "@/lib/utilts";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Input } from "../smallComponent/input";
-import { Button } from "../smallComponent/button";
 import { useTheme } from "next-themes";
 
 type UpiInfo = {
@@ -70,12 +69,12 @@ const UpiPayment = ({ disabled }: { disabled?: boolean }) => {
     return (
         <div className="py-[14px] px-[24px]">
             <h2
-                style={{
-                    color:
-                        theme === "light"
-                            ? brandInfo?.theme["--background"]
-                            : brandInfo?.theme["--foreground"],
-                }}
+                // style={{
+                //     color:
+                //         theme === "light"
+                //             ? brandInfo?.theme["--background"]
+                //             : brandInfo?.theme["--foreground"],
+                // }}
                 className="mb-4 font-semibold text-[#3F3F46] text-[12px]"
             >
                 Pay Using Credit/Debit Card
@@ -91,14 +90,12 @@ const UpiPayment = ({ disabled }: { disabled?: boolean }) => {
                 {errors.upi_id && (
                     <div className="text-xs text-red-600">{errors.upi_id}</div>
                 )}
-                <Button
+                <button
                     type="submit"
-                    className="uppercase text-white text-[12px] font-bold"
-                    style={{ backgroundColor: brandInfo?.theme["--primary"] }}
-                    disabled={disabled}
+                    className="relative right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-400 font-semibold text-[14px]  p-[15px] mt-2"
                 >
                     Pay now
-                </Button>
+                </button>
                 {disabled && (
                     <p className="text-xs mt-2 text-rose-600">
                         Disabled by seller

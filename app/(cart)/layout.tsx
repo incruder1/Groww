@@ -10,7 +10,6 @@ export default function RootLayout({
         <div>
             <Header />
             {children}
-            {/* <DarkmodeToggle className="sticky bottom-5 left-5 z-10 border border-slate-400 bg-white dark:bg-black md:hidden dark:border-[#494949]" /> */}
         </div>
     );
 }

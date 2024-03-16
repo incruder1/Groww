@@ -1,6 +1,14 @@
-import Confirmation from "@/component/confirmation"
+import Confirmation from "@/component/confirmation";
 
 const EmptyCartPage = () => {
-    return <Confirmation imagePath="/bag.svg" heading="Your Bag is empty!" subheading="Add some items to proceed" buttonText="Add from watchlist" className="h-[50vh]" />
-}
-export default EmptyCartPage
+  return (
+    <Confirmation
+      imagePath="/bag.svg"
+      heading="Your Bag is empty!"
+      subheading="Add some items to proceed"
+      buttonText="Add from watchlist"
+      className="h-[50vh]"
+    />
+  );
+};
+export default EmptyCartPage;

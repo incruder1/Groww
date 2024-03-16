@@ -46,37 +46,33 @@ const Product = ({
           />
         )}
 
-        <div className="flex flex-col justify-between h-full gap-y-2 w-full">
-          <h2
-            // style={{color: theme === 'light' ? brandInfo?.theme["--background"] : brandInfo?.theme["--foreground"]}}
-            className="text-[14px] font-semibold text-[#3F3F46]"
-          >
+        <div className="flex flex-col py-4 h-full gap-y-2 w-full">
+          <h2 className="text-[14px] font-semibold text-[#3F3F46] uppercase">
             {title}
           </h2>
-          <h4 className="text-[#71717A] text-[14px]">{product.title}</h4>
+          <h4 className="text-[#71717A] font-semibold text-[14px]">{product.title}</h4>
           <div className="flex flex-row  space-between ">
-                    <div className=" font-semibold text-[12px] w-fit pr-[5vw]  rounded-[4px] overflow-hidden ">
-                        Quantity: {product.quantity}
-                    </div>
-                    <p 
-                    // style={{color: theme === 'light' ? brandInfo?.theme["--background"] : brandInfo?.theme["--foreground"]}} 
-                    className="font-semibold text-[12px] overflow-x-auto text-[#3F3F46]">
-                        &#8377;Price:-  {product.price}
-                    </p>
-        </div>
-
+            <div className=" font-semibold text-[12px] w-fit pr-[5vw]  rounded-[4px] overflow-hidden ">
+              Quantity: {product.quantity}
+            </div>
+            <p
+              // style={{color: theme === 'light' ? brandInfo?.theme["--background"] : brandInfo?.theme["--foreground"]}}
+              className="font-semibold text-[12px] overflow-x-auto text-[#3F3F46]"
+            >
+              Price:- &#8377;{product.price}
+            </p>
+          </div>
         </div>
       </div>
       {!removeDisable && (
         <div className=" ">
-          <Button
+          <button
             style={{ color: brandInfo?.theme["--primary"] }}
-            className="uppercase font-semibold text-[12px] border-none text-center align-middle content-center pt-0 pb-0 pl-0 pr-0 text-[#3F3F46]  "
-            variant={"link"}
+            className="uppercase font-semibold text-[12px] border-none text-center align-middle content-center pt-0 pb-0 pl-0 pr-0 text-[#3F3F46]"
             onClick={() => removeProduct(product.id)}
           >
             Remove
-          </Button>
+          </button>
         </div>
       )}
     </div>

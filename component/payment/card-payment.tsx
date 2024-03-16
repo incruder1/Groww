@@ -3,7 +3,6 @@ import { useLogoInfo } from "@/hooks/items-hooks"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "../smallComponent/input";
-import { Button } from "../smallComponent/button";
 import { useTheme } from "next-themes";
 
 type CardInfo = {
@@ -81,11 +80,7 @@ const CardPayment = ({ disabled }: { disabled?: boolean }) => {
     return (
         <div className="py-[14px] px-[24px]">
             <h2
-                style={{color:
-                        theme === "light"
-                            ? brandInfo?.theme["--background"]
-                            : brandInfo?.theme["--foreground"],
-                }}
+                
                 className="mb-4 font-semibold text-[#3F3F46] text-[12px]"
             >
                 Pay Using Credit/Debit Card
@@ -147,14 +142,14 @@ const CardPayment = ({ disabled }: { disabled?: boolean }) => {
                     </div>
                 </div>
 
-                <Button
+                <button
                     type="submit"
-                    className="uppercase text-white text-[12px] font-bold"
-                    style={{ backgroundColor: brandInfo?.theme["--primary"] }}
+                    className=" relative right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-200 font-semibold text-[14px]  p-[15px] mt-2"
+                    // style={{ backgroundColor: brandInfo?.theme["--primary"] }}
                     disabled={disabled}
                 >
                     Pay now
-                </Button>
+                </button>
                 {disabled && (
                     <p className="text-xs mt-2 text-rose-600">
                         Disabled by seller
