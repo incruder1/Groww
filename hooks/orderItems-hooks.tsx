@@ -9,7 +9,7 @@ export type itemType = {
     title: string;
     price: number;
     image: string;
-    quantity: string;
+    quantity: number;
 };
 
 export type OrderDetails = {

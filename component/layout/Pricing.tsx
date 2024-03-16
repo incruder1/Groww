@@ -7,8 +7,13 @@ import {useLogoInfo} from "@/hooks/items-hooks";
 import { useTheme } from "next-themes";
 import Loading from "../smallComponent/loading";
 import { useRouter } from "next/navigation"
-// import {calculateTotal} from "@/providers/calculateTotal";
-export const Pricing = ( {page}) => {
+// import {calculateTotal} from "@/providers/calculateTotal";+
+interface PricingProps {
+    page: any; // Define the page prop as type any
+  
+
+  }
+  export const Pricing = ({ page }: PricingProps) => {
     const router = useRouter();
     const [coupon, setCoupon] = useState("");
     const [discount, setDiscount] = useState(0);
@@ -31,7 +36,7 @@ export const Pricing = ( {page}) => {
         }
     };
     // var total=calculateTotal(orderDetails.products);
-    const prices: number[] = orderDetails.products.map(({ price, quantity,id }) => price*quantity);
+    const prices: number[] = orderDetails.products.map(({ price, quantity, id }) => price * quantity);
     console.log(orderDetails.products); // Outputs the correct quantity
     const total = prices.reduce((prev, curr) => prev + curr, 0);
 console.log('Total price:', total);
