@@ -17,6 +17,7 @@ const Logo = () => {
                     alt="merchant logo"
                     objectFit="contain"
                     layout="fill"
+                     
                 />
             </div>
             <h2 className="font-semibold text-[14px] text-#44475B">

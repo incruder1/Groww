@@ -21,7 +21,7 @@ const Confirmation = ({imagePath, heading, subheading, buttonText, className}: C
 
     return (
         <div className={cn("flex w-full items-center justify-center flex-col space-y-4", className)}>
-            <Image unoptimized={true} src={imagePath} alt="bag" width={60} height={60} />
+            <Image unoptimized={true} src={imagePath} alt="Logo" width={60} height={60} />
             <div>
                 <h2 className="text-[16px] text-[#3F3F46] text-center">{heading}</h2>
                 <p className="text-[#71717A] text-[16px] text-center mt-1">{subheading}</p>

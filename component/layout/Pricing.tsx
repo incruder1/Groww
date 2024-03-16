@@ -2,14 +2,11 @@
 
 import React, { use, useEffect, useState } from "react";
 import { useOrderDetails } from "@/hooks/orderItems-hooks";
-import { redirect } from "next/navigation";
 import { useLogoInfo } from "@/hooks/items-hooks";
 import { useTheme } from "next-themes";
 import Loading from "../smallComponent/loading";
 import { useRouter } from "next/navigation";
-// import {calculateTotal} from "@/providers/calculateTotal";+
 import { useTotalAmount } from "@/providers/calculateTotal";
-import { useOrderDetailsStore } from "@/hooks/orderItems-hooks";
 interface PricingProps {
   page: any; // Define the page prop as type any
 }
