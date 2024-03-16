@@ -23,7 +23,7 @@ const Options = ({
     const data = useLogoInfo();
     const {theme} = useTheme()
     return (
-        <div className="w-full md:w-[200px] bg-[#FBFBFB] border-b border-[#F4F4F5] dark:border-[#494949] dark:bg-zinc-900">
+        <div className="w-full md:w-[200px] bg-[#FBFBFB] border-b border-[#F4F4F5] dark:border-[#494949]">
             {Object.values(PaymentOptions).map((payment, idx) => (
                 <div
                     key={idx}
@@ -31,12 +31,23 @@ const Options = ({
                         "w-full py-[14px] px-[24px] hover:cursor-pointer font-semibold text-[12px]"
                     )}
                     style={{
+                        // color:
+                        //     payment === value
+                        //         ? data?.theme["--primary"]
+                        //         : undefined,
+                        // backgroundColor:
+                        //     payment === value ? theme === 'light' ? "white" : "#121212" : undefined,
+                        // borderLeft: payment === value ? "solid" : undefined,
+                        // borderColor:
+                        //     payment === value
+                        //         ? data?.theme["--primary"]
+                        //         : undefined,
                         color:
                             payment === value
                                 ? data?.theme["--primary"]
                                 : undefined,
                         backgroundColor:
-                            payment === value ? theme === 'light' ? "white" : "#121212" : undefined,
+                            payment === value ? theme === 'light' ? "bg-teal-100" : "bg-teal-600" : undefined,
                         borderLeft: payment === value ? "solid" : undefined,
                         borderColor:
                             payment === value
@@ -72,7 +83,7 @@ const PaymentGateway = () => {
             <div className="uppercase font-semibold text-[12px] py-[20px] px-[24px] border-b dark:border-[#494949] border-[#F4F4F5] text-center">
                 Choose Payment Method
             </div>
-            <div className="flex flex-col md:flex-row h-full">
+            <div className="flex flex-col md:flex-row h-full">  
                 <Options value={payment} setValue={setPayment} />
                 <div className="flex-1">
                     <PaymentScreen value={payment} />

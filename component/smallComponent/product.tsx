@@ -55,7 +55,7 @@ const Product = ({
           </h2>
           <h4 className="text-[#71717A] text-[14px]">{product.title}</h4>
           <div className="flex flex-row  space-between ">
-                    <div className=" font-semibold text-[12px] w-fit pr-[5vw] rounded-[4px] overflow-hidden ">
+                    <div className=" font-semibold text-[12px] w-fit pr-[5vw]  rounded-[4px] overflow-hidden ">
                         Quantity: {product.quantity}
                     </div>
                     <p 
