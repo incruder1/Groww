@@ -17,8 +17,11 @@ const Orders = ({ heading, page }: OrdersProps) => {
     const imageDisable = page === "confirmation";
     const removeDisable = page === "confirmation";
     return (
+        <div>          
         <div className="w-full border border-[#F4F4F5] dark:border-[#494949] p-[24px] rounded-[8px] h-fit">
-            <h1 style={{color: theme === 'light' ? brandInfo?.theme["--background"] : brandInfo?.theme["--foreground"]}} className="font-semibold text-[12px] text-[#3F3F46] uppercase">
+            <h1 
+            // style={{color: theme === 'light' ? brandInfo?.theme["--background"] : brandInfo?.theme["--foreground"]}}
+             className="font-semibold text-[12px] text-[#3F3F46] uppercase ">
                 {heading}
             </h1>
             <div>
@@ -35,6 +38,7 @@ const Orders = ({ heading, page }: OrdersProps) => {
                     );
                 })}
             </div>
+        </div>
         </div>
     );
 };

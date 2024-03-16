@@ -1,7 +1,9 @@
 "use client"
 import {useOrderDetails} from "@/hooks/orderItems-hooks"
+import { useTheme } from "next-themes";
 import { Console } from "console";
-export const Cart=()=>{
+
+export const AddressBox=()=>{
     const orderItem=useOrderDetails();
     console.log(orderItem);
     
@@ -122,7 +124,7 @@ export const Cart=()=>{
 //     </div>
 //   </div>
 <div>
-hio
+{/* hio */}
 </div>
   );
 }
