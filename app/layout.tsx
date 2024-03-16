@@ -4,8 +4,6 @@ import { LogoInfoContextProvider } from "@/providers/logoInfo-provider";
 import { OrderDetailsProvider } from "@/providers/orderItemDetail-provider";
 import { TotalAmountProvider } from "@/providers/calculateTotal";
 // import ErrorPage from "@/app/error";
-import MyApp from "@/providers/error"
-import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,7 +28,7 @@ export default function RootLayout({
           <OrderDetailsProvider>
             <LogoInfoContextProvider>{children}</LogoInfoContextProvider>
           </OrderDetailsProvider>
-          <Toaster />
+          
         </TotalAmountProvider>
          
          
