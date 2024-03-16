@@ -91,7 +91,7 @@ const CardPayment = ({ disabled }: { disabled?: boolean }) => {
                     name="nameOnCard"
                     value={formData.nameOnCard}
                     onChange={handleChange}
-                    className="placeholder:text-[#D4D4D8] placeholder:text-[10px] rounded-[2px] border-[#D4D4D8] dark:border-[#494949] shadow-none"
+                    className="placeholder:text-[#D4D4D8] placeholder:text-[10px] rounded-[2px] border-[#D4D4D8]  shadow-none"
                 />
                 {errors.nameOnCard && (
                     <div className="text-xs text-red-600">
@@ -103,7 +103,7 @@ const CardPayment = ({ disabled }: { disabled?: boolean }) => {
                     name="cardNumber"
                     value={formData.cardNumber}
                     onChange={handleChange}
-                    className="placeholder:text-[#D4D4D8] placeholder:text-[10px]  border-[#D4D4D8] dark:border-[#494949] shadow-none rounded-[2px]"
+                    className="placeholder:text-[#D4D4D8] placeholder:text-[10px]  border-[#D4D4D8] shadow-none rounded-[2px]"
                 />
                 {errors.cardNumber && (
                     <div className="text-xs text-red-600">
@@ -118,7 +118,7 @@ const CardPayment = ({ disabled }: { disabled?: boolean }) => {
                             name="validThru"
                             value={formData.validThru}
                             onChange={handleChange}
-                            className="placeholder:text-[#D4D4D8] placeholder:text-[10px] rounded-[2px] border-[#D4D4D8] dark:border-[#494949] shadow-none"
+                            className="placeholder:text-[#D4D4D8] placeholder:text-[10px] rounded-[2px] border-[#D4D4D8]  shadow-none"
                         />
                         {errors.validThru && (
                             <div className="text-xs text-red-600">
@@ -132,7 +132,7 @@ const CardPayment = ({ disabled }: { disabled?: boolean }) => {
                             name="cvv"
                             value={formData.cvv}
                             onChange={handleChange}
-                            className="placeholder:text-[#D4D4D8] placeholder:text-[10px] rounded-[2px] border-[#D4D4D8] dark:border-[#494949] shadow-none"
+                            className="placeholder:text-[#D4D4D8] placeholder:text-[10px] rounded-[2px] border-[#D4D4D8] shadow-none"
                         />
                         {errors.cvv && (
                             <div className="text-xs text-red-600">

@@ -32,7 +32,7 @@ const Product = ({
     <div
       className={cn(
         "min-h-[113px] py-[24px]  flex flex-row justify-between",
-        !lastItem && "border-b border-[#F4F4F5] dark:border-[#494949]"
+        !lastItem && "border-b border-[slate-500] "
       )}
     >
       <div className="flex flex-row items-center">

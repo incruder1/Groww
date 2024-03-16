@@ -23,7 +23,10 @@ const Options = ({
     const data = useLogoInfo();
     const {theme} = useTheme()
     return (
-        <div className="w-full md:w-[200px] bg-[#FBFBFB] border-b border-[#F4F4F5] dark:border-[#494949]">
+        <div className="w-full md:w-[200px] bg-[#FBFBFB] border-b border-[#F4F4F5]
+      
+         "
+         >
             {Object.values(PaymentOptions).map((payment, idx) => (
                 <div
                     key={idx}
@@ -67,8 +70,8 @@ const PaymentScreen = ({ value }: { value: PaymentOptions }) => {
 const PaymentGateway = () => {
     const [payment, setPayment] = useState(PaymentOptions.UPI);
     return (
-        <div className="border border-[#F4F4F5] dark:border-[#494949] flex flex-col min-h-[400px] rounded-[8px]">
-            <div className="uppercase font-semibold text-[12px] py-[20px] px-[24px] border-b dark:border-[#494949] border-[#F4F4F5] text-center">
+        <div className="border border-[slate-900] flex flex-col min-h-[400px] rounded-[8px]">
+            <div className="uppercase font-semibold text-[12px] py-[20px] px-[24px] border-b  border-[#F4F4F5] text-center">
                 Choose Payment Method
             </div>
             <div className="flex flex-col md:flex-row h-full">  

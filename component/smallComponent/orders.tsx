@@ -18,7 +18,7 @@ const Orders = ({ heading, page }: OrdersProps) => {
     const removeDisable = page === "confirmation";
     return (
         <div>          
-        <div className="w-full border border-[#F4F4F5]  p-[24px] rounded-[8px] h-fit">
+        <div className="w-full border border-[slate-500]  p-[24px] rounded-[8px] h-fit">
             <h1 
              className="font-bold text-[16px] text-[#3F3F46] uppercase text-center  ">
                 {heading}

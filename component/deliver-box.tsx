@@ -20,7 +20,9 @@ const AddressBox = ({ page }: AddressBoxProps) => {
         return <Loading />;
     }
     return (
-        <div className="h-[124px] p-[24px] flex flex-row justify-between border border-[#F4F4F5] dark:border-[#494949] rounded-[8px]">
+        <div className="h-[124px] p-[24px] flex flex-row justify-between border border-[#F4F4F5] 
+        
+         rounded-[8px]">
             <div className="flex flex-col justify-between">
                 <div>
                     <h1 className="uppercase text-[12px] text-[#3F3F46] font-semibold"
