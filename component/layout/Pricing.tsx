@@ -2,7 +2,6 @@
 
 import React, { use, useEffect, useState } from "react";
 import { useOrderDetails } from "@/hooks/orderItems-hooks";
-import { ToastContainer, toast } from "react-toastify";
 import { redirect } from "next/navigation";
 import { useLogoInfo } from "@/hooks/items-hooks";
 import { useTheme } from "next-themes";
