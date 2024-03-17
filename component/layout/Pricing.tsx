@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use, useEffect, useState } from "react";
+import React, { use, useContext, useEffect, useState } from "react";
 import { useOrderDetails } from "@/hooks/orderItems-hooks";
 import { useLogoInfo } from "@/hooks/items-hooks";
 import { useTheme } from "next-themes";
@@ -13,14 +13,19 @@ interface PricingProps {
 export const Pricing = ({ page }: PricingProps) => {
   const router = useRouter();
   const [coupon, setCoupon] = useState("");
-  const [discount, setDiscount] = useState(0);
+  const [discountValue, setDiscountValue] = useState(0);
   const { theme } = useTheme();
   const { data: orderDetails } = useOrderDetails();
   const { totalAmount, setTotalAmount } = useTotalAmount();
   const [showWarning, setShowWarning] = useState("");
   const [warning, setWarning] = useState(false);
   const logoInfo = useLogoInfo();
-
+  useEffect(() => {
+    const discountValue = localStorage.getItem("discount");
+    const discountAmount = discountValue ? parseFloat(discountValue) : 0;
+    setDiscountValue(discountAmount);
+  }, []);
+  useEffect(() => {}, [discountValue]);
   const delivery = 40;
   if (!orderDetails || !logoInfo || orderDetails.products.length === 0) {
     return <Loading className="h-[207px]" />;
@@ -38,29 +43,37 @@ export const Pricing = ({ page }: PricingProps) => {
   }
 
   const handleApplyDiscount = () => {
-    if (coupon.toLowerCase() == "groww" && warning == false) {
-      setDiscount(0.1);
+    if (coupon.toLowerCase() == "groww") {
       setCoupon("");
+      localStorage.setItem("discount", (totalAmount * 0.1).toString());
       let discountedTotal = totalAmount * 0.9;
-      const finalamount = discountedTotal + delivery;
-      setWarning(true);
       setTotalAmount(discountedTotal);
+      console.log(
+        discountedTotal +
+          "discountedTotal" +
+          totalAmount +
+          "totalAmount" +
+          total +
+          "total" +
+          discountValue +
+          "discountValue"
+      );
       setShowWarning("");
     } else {
-      setDiscount(0);
       setShowWarning("Invalid Coupon");
-       
+      setCoupon("");
+      console.log(coupon + "coupon");
+      setTotalAmount(total + delivery);
+      localStorage.removeItem("discount");
+      setDiscountValue(0);
     }
   };
-
-  // console.log(totalAmount + "totalAmount");
   return (
     <div>
       <div className="w-full p-[24px] space-y-4 border border-[#EEE8EE]  h-fit rounded-[8px]">
         <h2 className="font-semibold text-[16px] text-[#3F3F46] uppercase">
           Cart Total
         </h2>
-
         <div className="text-[#00000] text-[14px] flex flex-row justify-between font-semibold">
           <p>Total Price</p>
           <p>&#8377; {total.toFixed(2)}</p>
@@ -95,17 +108,23 @@ export const Pricing = ({ page }: PricingProps) => {
                 Apply
               </button>
             </div>
-            </>
+          </>
         ) : null}
-            <div className="flex items-center justify-between mt-6  ">
-              <span className="text-[#00000] font-semibold text-[14px]">
-                Discount
-              </span>
-              {/* <span> &#8377;{totalAmount-(totalAmount * (1-discount))==0? 0:(-1*(totalAmount-(total))).toFixed(2)}</span> */}
-              <span> &#8377; {totalAmount-(total+delivery)==0?0:(total-totalAmount).toFixed(2)} </span>
-            </div>{" "}
-         
-
+        <div className="flex items-center justify-between mt-6  ">
+          <span className="text-[#00000] font-semibold text-[14px]">
+            Discount
+          </span>
+          <span>
+            {" "}
+            &#8377;{" "}
+            {discountValue != 0
+              ? discountValue
+              : totalAmount - (total + delivery) == 0
+              ? 0
+              : ((totalAmount * 0.1) / 0.9).toFixed(2)}{" "}
+            {/* {discountValue != 0 ? discountValue : 0} */}
+          </span>
+        </div>{" "}
         <div className="text-[#00000] text-[14px] flex flex-row font-semibold justify-between text-[14px]">
           <p>Total Amount</p>
           <p>&#8377; {totalAmount.toFixed(2)}</p>

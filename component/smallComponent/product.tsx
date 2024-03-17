@@ -7,7 +7,6 @@ import {
   useOrderDetailsStore,
 } from "@/hooks/orderItems-hooks";
 import { useLogoInfo } from "@/hooks/items-hooks";
-import { Button } from "./button";
 import { cn } from "@/lib/utilts";
 import { useTheme } from "next-themes";
 

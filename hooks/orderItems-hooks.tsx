@@ -46,6 +46,30 @@ export const useOrderDetailsStore = create<OrderDetailsStore>((set) => ({
             };
         });
     },
+    // data: null,
+    // fetchData: async (body) => {
+    //     let data:any= {}
+    //     body.flag ?data={cache:"force-cache"}:data={}
+    //     const response = await fetch("https://groww-intern-assignment.vercel.app/v1/api/order-details",data
+    //     );
+    //     const data: OrderDetails = await response.json();
+    //     set({ data: data });
+    // },
+    // removeProduct: (id: number) => {
+    //     set((state) => {
+    //         if (!state.data) return state;
+    //         const updatedProducts = state.data.products.filter(
+    //             (product) => product.id !== id
+    //         );
+    //         return {
+    //             ...state,
+    //             data: {
+    //                 paymentMethods: state.data.paymentMethods,
+    //                 products: updatedProducts,
+    //             },
+    //         };
+    //     });
+    // },
 }));
 
 export const useOrderDetails = () => {

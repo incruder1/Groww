@@ -5,7 +5,7 @@ const EmptyCartPage = () => {
     <Confirmation
       imagePath="/bag.svg"
       heading="Your Bag is empty!"
-      subheading="Add some items to proceed"
+      subheading="Add some items to proceed to checkout."
       buttonText="Add from watchlist"
       className="h-[50vh]"
     />

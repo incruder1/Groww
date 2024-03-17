@@ -3,6 +3,7 @@ import React, { createContext, useState, useContext, ReactNode } from "react";
 // Define the type for the context value
 interface TotalAmountContextValue {
   totalAmount: number;
+  // discount: number;
   setTotalAmount: React.Dispatch<React.SetStateAction<number>>;
 }
 
@@ -30,9 +31,13 @@ interface TotalAmountProviderProps {
 export const TotalAmountProvider = ({ children }: TotalAmountProviderProps) => {
   const [totalAmount, setTotalAmount] = useState<number>(0);
 
+  // const discountValue = localStorage.getItem("discount");
+  // const discount = discountValue ? parseFloat(discountValue) : 0;
+
   const value: TotalAmountContextValue = {
     totalAmount,
     setTotalAmount,
+    // discount,
   };
   // console.log(value);
 

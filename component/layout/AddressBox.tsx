@@ -6,7 +6,6 @@ export const AddressBox=()=>{
     
     return (
 <div>
-{/* hio */}
 </div>
   );
 }
