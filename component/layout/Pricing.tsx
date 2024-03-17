@@ -118,7 +118,7 @@ export const Pricing = ({ page }: PricingProps) => {
             {" "}
             &#8377;{" "}
             {discountValue != 0
-              ? discountValue
+              ? discountValue.toFixed(2)
               : totalAmount - (total + delivery) == 0
               ? 0
               : ((totalAmount * 0.1) / 0.9).toFixed(2)}{" "}
