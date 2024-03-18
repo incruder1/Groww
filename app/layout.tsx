@@ -25,6 +25,7 @@ export default function RootLayout({
             <LogoInfoContextProvider>{children}</LogoInfoContextProvider>
           </OrderDetailsProvider>
         </TotalAmountProvider>
+      
       </body>
     </html>
   );

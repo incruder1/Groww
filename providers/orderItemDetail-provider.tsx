@@ -14,7 +14,7 @@ export const OrderDetailsProvider = (props: Props) => {
     const { data, fetchData } = useOrderDetailsStore();
 
     useEffect(() => {
-        fetchData();
+        fetchData({flag:false});
     }, [fetchData]);
 
     const value = {
