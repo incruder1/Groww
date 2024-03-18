@@ -100,7 +100,7 @@ export const Pricing = ({ page }: PricingProps) => {
               ) : null}
               <button
                 onClick={handleApplyDiscount}
-                className="relative right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-400 font-semibold text-[14px]  p-[15px] mt-2 "
+                className="relative right-0 uppercase rounded-[6px] border-lg  text-Black bg-slate-400 font-semibold text-[14px]  p-[15px] mt-2   hover:text-[white] hover:cursor-pointer"
                 disabled={
                   totalAmount == 0 ? true : coupon.length === 0 ? true : false
                 }
